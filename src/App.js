@@ -1,12 +1,13 @@
-import React from "react";
+import React,{Component} from "react";
 import ReactDOM from "react-dom";
-function App(props){
-  return (
-    <div>
-        <h1>Hello World</h1>
-        <p>{props.details.name}</p>
-        <p>{props.details.age}</p>
-      </div>
-  )
+class App extends React.Component{
+  constructor(props){
+      super(props)
+  }
+  render(){
+    return(
+      <h1>Hello World {this.props.details.name}</h1>
+    )
+  }
 }
 export default App;
